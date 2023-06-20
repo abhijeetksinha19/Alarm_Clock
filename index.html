@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Abhijeet Kumar Sinha">
+
+													<!-- ADDING FAVICON & CSS FILE -->
+
+	<link rel="shortcut icon" type="image/x-icon" href="71J2gxlRMuL._SL1500_.jpg">	
+	<link rel="stylesheet" type="text/css" href="index.css">											
+
+    <style>
+        /* aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: top;
+  font-style: italic;
+  background-color: lightgray;
+} */
+    </style>
+															<!-- Title of the Page -->
+	<title> Alarm Clock </title>
+</head>
+<body>
+	<!--
+		Things to be visible in the Webpage 
+			1.Clock
+			2.Alarm Setting button
+			3.Alarm List
+				i)Cancel Alarm button	
+
+ 	-->
+
+                                                                <!-- CLOCK -->
+
+     <section class="container">
+
+                                                            <!-- ANGULAR CLOCK -->
+
+        <div class="AlarmClock">
+			<div class="outer-clock-face">
+				<div class="marking marking-one"></div>
+				<div class="marking marking-two"></div>
+				<div class="marking marking-three"></div>
+				<div class="marking marking-four"></div>
+
+				<div class="inner-clock-face">
+					<div class="hand hour-hand"></div>
+					<div class="hand min-hand"></div>
+					<div class="hand second-hand"></div>
+				</div>
+			</div>
+		</div>
+
+                                                                <!-- DIGITAL CLOCK -->
+
+        <div class="time-display">
+            <div id="clock"></div>
+        </div>
+    </section>   
+	
+
+																<!-- ALARM SETTING -->
+
+	<aside>
+        <section class="setting">
+            <form class="setAlarm">
+                <label class="alarm-heading"><h3 id="one">Set Alarm(24-Hour Clock)</h3><label>
+                <div class="set-alarm-field">
+                    <input type="number" name="a_hour" id="a_hour" placeholder="Hour" max="23" min="00">
+                    &nbsp
+                    <input type="number" name="a_min" id="a_min" placeholder="Minute" max="59" min="00">
+                    &nbsp
+                    <input type="number" name="a_sec" id="a_sec" placeholder="Second" max="59" min="00">
+                </div>
+                <div class="controls">
+                    <button type="submit" onclick="alert('Your Alarm has been set successfully')" class="set-alarm">Set Alarm</button>
+                    &nbsp
+                    <button type="reset" onclick="clearAlarm()" class="clear-alarm">Stop Alarm</button>
+                </div>
+            </form> 		
+         </section>
+         <br>
+
+																<!-- ALARM LIST -->
+
+        <section class="list">
+            <div id="one">
+                ALARM LIST
+            </div>
+            <div>
+                <ul id = "myList">
+                                                                            
+                </ul>
+            </div>
+        </section>
+ 	</aside>
+
+															<!-- ADDING JAVASCRIPT FILE -->
+ 	<script src="index.js"></script>
+</body>
+</html>
